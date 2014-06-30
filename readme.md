@@ -6,6 +6,8 @@
 
 *Issues should be opened on the pageres [issue tracker](https://github.com/sindresorhus/pageres/issues).*
 
+[Using another task runner?](https://github.com/sindresorhus/pageres#task-runners)
+
 
 ## Install
 
