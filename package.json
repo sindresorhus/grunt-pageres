@@ -1,0 +1,46 @@
+{
+  "name": "grunt-pageres",
+  "version": "0.0.0",
+  "description": "Responsive website screenshots",
+  "license": "MIT",
+  "repository": "sindresorhus/grunt-pageres",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "files": [
+    "tasks"
+  ],
+  "keywords": [
+    "gruntplugin",
+    "pageres",
+    "page",
+    "website",
+    "site",
+    "web",
+    "url",
+    "resolution",
+    "size",
+    "screenshot",
+    "screen",
+    "responsive"
+  ],
+  "dependencies": {
+    "pageres": "^0.3.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.4.0"
+  },
+  "peerDependencies": {
+    "grunt": "^0.4.0"
+  }
+}
