@@ -23,11 +23,19 @@ $ npm install --save-dev grunt-pageres
 ```js
 grunt.initConfig({
 	pageres: {								// task
-		dist: {								// target
+		yeoman: {							// target
 			options: {
 				url: 'yeoman.io',
 				sizes: ['1200x800', '800x600'],
 				dest: 'dist'
+			}
+		},
+		todomvc: {
+			options: {
+				url: 'todomvc.com',
+				sizes: ['800x1000', '400x1000'],
+				dest: 'dist',
+				crop: true
 			}
 		}
 	}
