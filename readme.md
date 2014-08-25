@@ -1,6 +1,6 @@
 # grunt-pageres [![Build Status](https://travis-ci.org/sindresorhus/grunt-pageres.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-pageres)
 
-[<img src="https://github.com/sindresorhus/pageres/raw/master/media/logo.png" width="200" align="right">](https://github.com/sindresorhus/pageres)
+[<img src="https://github.com/sindresorhus/pageres/raw/master/media/logo.png" width="150" align="right">](https://github.com/sindresorhus/pageres)
 
 > Responsive website screenshots using [pageres](https://github.com/sindresorhus/pageres)
 
