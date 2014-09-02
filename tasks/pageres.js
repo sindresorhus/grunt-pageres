@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		var options = this.options();
 
 		if (!options.url || !options.sizes || !options.dest) {
-			grunt.warn('`url`, `sizes`, `dest` are required.');
+			grunt.warn('url|sizes|dest are required');
 			return;
 		}
 

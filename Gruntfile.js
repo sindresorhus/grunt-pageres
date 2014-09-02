@@ -10,9 +10,6 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		nodeunit: {
-			tasks: ['test.js']
-		},
 		clean: {
 			test: ['tmp/**']
 		}
@@ -20,7 +17,6 @@ module.exports = function (grunt) {
 
 	grunt.loadTasks('tasks');
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-	grunt.registerTask('default', ['clean', 'pageres', 'nodeunit', 'clean']);
+	grunt.registerTask('default', ['clean', 'pageres']);
 };

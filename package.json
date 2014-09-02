@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt && node test.js"
   },
   "files": [
     "tasks"
@@ -33,14 +33,13 @@
     "responsive"
   ],
   "dependencies": {
-    "pageres": "^0.4.0"
+    "pageres": "^0.4.1"
   },
   "devDependencies": {
+    "ava": "0.0.4",
+    "del": "^0.1.2",
     "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-nodeunit": "^0.4.1"
-  },
-  "peerDependencies": {
-    "grunt": "^0.4.0"
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0"
   }
 }

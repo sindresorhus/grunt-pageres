@@ -21,9 +21,11 @@ $ npm install --save-dev grunt-pageres
 ## Usage
 
 ```js
+require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+
 grunt.initConfig({
-	pageres: {								// task
-		yeoman: {							// target
+	pageres: {
+		yeoman: {
 			options: {
 				url: 'yeoman.io',
 				sizes: ['1200x800', '800x600'],
@@ -41,23 +43,20 @@ grunt.initConfig({
 	}
 });
 
-grunt.loadNpmTasks('grunt-pageres');
 grunt.registerTask('default', ['pageres']);
 ```
 
 
-## API
+## Options
 
-### Options
-
-#### url
+### url
 
 *Required*  
 Type: `string`
 
 URL or local path to the website you want to screenshot.
 
-#### sizes
+### sizes
 
 *Required*  
 Type: `array`
@@ -68,14 +67,14 @@ A keyword is a version of a device from [this list](http://viewportsizes.com).
 You can also pass in the `w3counter` keyword to use the ten most popular 
 resolutions from [w3counter](http://www.w3counter.com/globalstats.php).
 
-#### dest
+### dest
 
 *Required*  
 Type: `string`
 
 Destination directory.
 
-#### delay
+### delay
 
 Type: `number` *(seconds)*  
 Default: `0`
@@ -84,14 +83,14 @@ Delay capturing the screenshot.
 
 Useful when the site does things after load that you want to capture.
 
-#### crop
+### crop
 
 Type: `boolean`  
 Default: `false`
 
 Crop to the set height.
 
-#### cookies
+### cookies
 
 Type: `array`  
 
