@@ -8,6 +8,7 @@ module.exports = function (grunt) {
 
 		if (!options.url || !options.sizes || !options.dest) {
 			grunt.warn('url|sizes|dest are required');
+			done();
 			return;
 		}
 
@@ -18,6 +19,7 @@ module.exports = function (grunt) {
 		pageres.run(function (err) {
 			if (err) {
 				grunt.warn(err);
+				done();
 				return;
 			}
 
