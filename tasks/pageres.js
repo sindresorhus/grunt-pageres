@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 				return;
 			}
 
-			pageres._logSuccessMessage();
+			pageres.successMessage();
 			done();
 		});
 	});
