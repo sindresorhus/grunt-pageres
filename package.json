@@ -33,7 +33,7 @@
     "responsive"
   ],
   "dependencies": {
-    "pageres": "^0.4.1"
+    "pageres": "^1.0.0"
   },
   "devDependencies": {
     "ava": "0.0.4",

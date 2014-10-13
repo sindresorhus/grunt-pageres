@@ -12,9 +12,15 @@ module.exports = function (grunt) {
 			return;
 		}
 
+		// grunt uses the standard lodash template syntax already
+		if (options.filename) {
+			options.filename = options.filename.replace(/\{\{([^{]+)\}\}/g, '<%= $1 %>');
+		}
+
 		var pageres = new Pageres(options)
 			.src(options.url, options.sizes)
-			.dest(options.dest);
+			.dest(options.dest)
+			.on('warn', grunt.verbose.writeln);
 
 		pageres.run(function (err) {
 			if (err) {
@@ -23,7 +29,7 @@ module.exports = function (grunt) {
 				return;
 			}
 
-			pageres._logSuccessMessage();
+			pageres.successMessage();
 			done();
 		});
 	});
