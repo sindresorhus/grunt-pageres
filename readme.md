@@ -134,6 +134,12 @@ Type: `string`
 
 Password for authenticating with HTTP auth.
 
+### scale
+
+Type: `number`
+
+Scale webpage `n` of times.
+
 
 ## License
 
