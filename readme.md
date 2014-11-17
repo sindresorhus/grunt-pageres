@@ -122,6 +122,12 @@ Type: `string`
 
 Capture a specific DOM element.
 
+### hide
+
+Type: `array`
+
+Hide an array of DOM elements.
+
 ### username
 
 Type: `string`
