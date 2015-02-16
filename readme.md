@@ -146,6 +146,14 @@ Type: `number`
 
 Scale webpage `n` of times.
 
+### format
+
+Type: `String`  
+Default: `png`  
+Values: `png`, `jpg`
+
+Image format.
+
 
 ## License
 
