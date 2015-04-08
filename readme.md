@@ -154,6 +154,12 @@ Values: `png`, `jpg`
 
 Image format.
 
+### userAgent
+
+Type: `string`
+
+Custom user agent.
+
 
 ## License
 
