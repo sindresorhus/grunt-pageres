@@ -1,35 +1,43 @@
 'use strict';
 var Pageres = require('pageres');
+var eachAsync = require('each-async');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('pageres', 'Responsive website screenshots', function () {
 		var done = this.async();
 		var options = this.options();
+		//If the old way of specifying url was using, just build a 1-element array.
+		if(options.urls === undefined && option.url !== undefined) options.urls = [options.url];
 
-		if (!options.url || !options.sizes || !options.dest) {
-			grunt.warn('url|sizes|dest are required');
-			done();
-			return;
-		}
-
-		// grunt uses the standard lodash template syntax already
-		if (options.filename) {
-			options.filename = options.filename.replace(/\{\{([^{]+)\}\}/g, '<%= $1 %>');
-		}
-
-		var pageres = new Pageres(options)
-			.src(options.url, options.sizes)
-			.dest(options.dest)
-			.on('warn', grunt.verbose.writeln);
-
-		pageres.run(function (err) {
-			if (err) {
-				grunt.warn(err);
-				done();
+		eachAsync(options.urls, function (url, i, next) {
+			if (!url || !options.sizes || !options.dest) {
+				grunt.warn('url|sizes|dest are required');
+				done(false);
 				return;
 			}
 
-			pageres.successMessage();
+			// grunt uses the standard lodash template syntax already
+			if (options.filename) {
+				options.filename = options.filename.replace(/\{\{([^{]+)\}\}/g, '<%= $1 %>');
+			}
+
+			var pageres = new Pageres(options)
+				.src(url, options.sizes)
+				.dest(options.dest)
+				.on('warn', grunt.verbose.writeln);
+
+			pageres.run(function (err) {
+				if (err) {
+					grunt.warn(err);
+					next();
+					return;
+				}
+
+				pageres.successMessage();
+				next();
+			});
+		}, function(){
+			grunt.log.writeln("Finished pageres task");
 			done();
 		});
 	});
