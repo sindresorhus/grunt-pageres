@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		var done = this.async();
 		var options = this.options();
 		//If the old way of specifying url was using, just build a 1-element array.
-		if(options.urls === undefined && option.url !== undefined) options.urls = [options.url];
+		if(options.urls === undefined && options.url !== undefined) options.urls = [options.url];
 		var allowedConcurrency = options.concurency || 2;
 
 		asyncLib.eachLimit(options.urls, allowedConcurrency, function (url, next) {
