@@ -56,6 +56,13 @@ Type: `string`
 
 URL or local path to the website you want to screenshot.
 
+### urls
+
+*Required*  
+Type: `array`
+
+An array of URL or local path to the websites you want to screenshot. If supplied, it will override the single url option.
+
 ### sizes
 
 *Required*  
@@ -89,6 +96,13 @@ Type: `boolean`
 Default: `false`
 
 Crop to the set height.
+
+### crop
+
+Type: `allowedConcurrency`  
+Default: `2`
+
+Maximum allowed concurrency for the pageres rendering. 
 
 ### cookies
 
