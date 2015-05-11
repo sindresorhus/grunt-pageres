@@ -34,9 +34,9 @@
   ],
   "dependencies": {
     "pageres": "^1.0.0",
-    "each-async": "^1.0.0",
   },
   "devDependencies": {
+    "async": "^0.9.0",
     "ava": "0.0.4",
     "del": "^0.1.2",
     "grunt": "^0.4.5",
