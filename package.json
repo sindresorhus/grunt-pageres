@@ -1,7 +1,7 @@
 {
   "name": "grunt-pageres",
   "version": "1.1.0",
-  "description": "Responsive website screenshots",
+  "description": "Capture website screenshots",
   "license": "MIT",
   "repository": "sindresorhus/grunt-pageres",
   "author": {
@@ -29,8 +29,26 @@
     "resolution",
     "size",
     "screenshot",
+    "screenshots",
+    "screengrab",
     "screen",
-    "responsive"
+    "snapshot",
+    "shot",
+    "responsive",
+    "gulpfriendly",
+    "phantom",
+    "phantomjs",
+    "image",
+    "svg",
+    "render",
+    "html",
+    "headless",
+    "capture",
+    "pic",
+    "picture",
+    "png",
+    "jpg",
+    "jpeg"
   ],
   "dependencies": {
     "arrify": "^1.0.0",
