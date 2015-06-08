@@ -25,16 +25,16 @@ require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
 grunt.initConfig({
 	pageres: {
-		yeoman: {
+		screenshot: {
 			options: {
-				url: 'yeoman.io',
+				urls: 'yeoman.io',
 				sizes: ['1200x800', '800x600'],
 				dest: 'dist'
 			}
 		},
-		todomvc: {
+		multipleUrls: {
 			options: {
-				url: 'todomvc.com',
+				urls: ['todomvc.com', 'google.com'],
 				sizes: ['800x1000', '400x1000'],
 				dest: 'dist',
 				crop: true
@@ -49,12 +49,12 @@ grunt.registerTask('default', ['pageres']);
 
 ## Options
 
-### url
+### urls
 
 *Required*  
-Type: `string`
+Type: `string`, `array`
 
-URL or local path to the website you want to screenshot.
+One or more URLs or local paths to the websites you want to screenshot.
 
 ### sizes
 

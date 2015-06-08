@@ -4,8 +4,15 @@ module.exports = function (grunt) {
 		pageres: {
 			screenshot: {
 				options: {
-					url: 'yeoman.io',
+					urls: 'yeoman.io',
 					sizes: ['1000x1000', '100x100'],
+					dest: 'tmp'
+				}
+			},
+			multipleUrls: {
+				options: {
+					urls: ['yeoman.io', 'google.com'],
+					sizes: ['1000x1000'],
 					dest: 'tmp'
 				}
 			}
