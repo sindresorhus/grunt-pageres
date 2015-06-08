@@ -1,6 +1,6 @@
 {
   "name": "grunt-pageres",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Capture website screenshots",
   "license": "MIT",
   "repository": "sindresorhus/grunt-pageres",
