@@ -161,6 +161,12 @@ Type: `string`
 
 Custom user agent.
 
+### headers
+
+Type: `object`
+
+Custom HTTP request headers.
+
 
 ## License
 
