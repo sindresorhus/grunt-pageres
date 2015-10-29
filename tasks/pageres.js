@@ -3,7 +3,7 @@ var Pageres = require('pageres');
 var arrify = require('arrify');
 
 module.exports = function (grunt) {
-	grunt.registerMultiTask('pageres', 'Responsive website screenshots', function () {
+	grunt.registerMultiTask('pageres', 'Capture website screenshots', function () {
 		var done = this.async();
 		var options = this.options();
 
