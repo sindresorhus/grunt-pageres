@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt && ava && trash tmp"
+    "test": "xo && grunt && ava && trash tmp"
   },
   "files": [
     "tasks"
@@ -59,6 +59,7 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "path-exists": "^2.0.0",
-    "trash-cli": "^1.1.0"
+    "trash-cli": "^1.1.0",
+    "xo": "*"
   }
 }
