@@ -32,15 +32,12 @@ module.exports = function (grunt) {
 		pageres.dest(options.dest)
 			.on('warn', grunt.verbose.writeln);
 
-		pageres.run(function (err) {
-			if (err) {
-				grunt.warn(err);
+		pageres
+			.run()
+			.then(function () {
+				pageres.successMessage();
 				done();
-				return;
-			}
-
-			pageres.successMessage();
-			done();
-		});
+			})
+			.catch(grunt.warn);
 	});
 };
