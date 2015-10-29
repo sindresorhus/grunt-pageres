@@ -1,15 +1,14 @@
-'use strict';
-var test = require('ava');
-var pathExists = require('path-exists');
+import test from 'ava';
+import pathExists from 'path-exists';
 
-test('pageres', function (t) {
-	t.assert(pathExists.sync('tmp/yeoman.io-1000x1000.png'));
-	t.assert(pathExists.sync('tmp/yeoman.io-100x100.png'));
+test('pageres', t => {
+	t.true(pathExists.sync('tmp/yeoman.io-1000x1000.png'));
+	t.true(pathExists.sync('tmp/yeoman.io-100x100.png'));
 	t.end();
 });
 
-test('multiple URLs', function (t) {
-	t.assert(pathExists.sync('tmp/yeoman.io-1000x1000.png'));
-	t.assert(pathExists.sync('tmp/google.com-1000x1000.png'));
+test('multiple URLs', t => {
+	t.true(pathExists.sync('tmp/yeoman.io-1000x1000.png'));
+	t.true(pathExists.sync('tmp/google.com-1000x1000.png'));
 	t.end();
 });

@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt && node test.js && trash tmp"
+    "test": "grunt && ava && trash tmp"
   },
   "files": [
     "tasks"
@@ -55,7 +55,7 @@
     "pageres": "^3.0.1"
   },
   "devDependencies": {
-    "ava": "0.0.4",
+    "ava": "*",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "path-exists": "^1.0.0",
