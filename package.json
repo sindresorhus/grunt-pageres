@@ -58,7 +58,7 @@
     "ava": "*",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "path-exists": "^1.0.0",
-    "trash": "^1.4.1"
+    "path-exists": "^2.0.0",
+    "trash-cli": "^1.1.0"
   }
 }
