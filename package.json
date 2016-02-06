@@ -52,7 +52,7 @@
   ],
   "dependencies": {
     "arrify": "^1.0.0",
-    "pageres": "^4.0.0"
+    "pageres": "^4.1.0"
   },
   "devDependencies": {
     "ava": "*",
