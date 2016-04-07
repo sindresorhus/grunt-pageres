@@ -63,10 +63,13 @@
   },
   "devDependencies": {
     "ava": "*",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
     "path-exists": "^2.0.0",
     "trash-cli": "^1.1.0",
     "xo": "*"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
   }
 }

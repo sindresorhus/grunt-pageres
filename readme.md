@@ -51,32 +51,30 @@ grunt.registerTask('default', ['pageres']);
 
 ### urls
 
-*Required*  
+*Required*<br>
 Type: `string`, `array`
 
 One or more URLs or local paths to the websites you want to screenshot.
 
 ### sizes
 
-*Required*  
+*Required*<br>
 Type: `array`
 
 Use a `<width>x<height>` notation or a keyword.
 
-A keyword is a version of a device from [this list](http://viewportsizes.com).
-You can also pass in the `w3counter` keyword to use the ten most popular 
-resolutions from [w3counter](http://www.w3counter.com/globalstats.php).
+A keyword is a version of a device from [this list](http://viewportsizes.com). You can also pass in the `w3counter` keyword to use the ten most popular resolutions from [w3counter](http://www.w3counter.com/globalstats.php).
 
 ### dest
 
-*Required*  
+*Required*<br>
 Type: `string`
 
 Destination directory.
 
 ### delay
 
-Type: `number` *(seconds)*  
+Type: `number` *(seconds)*<br>
 Default: `0`
 
 Delay capturing the screenshot.
@@ -85,7 +83,7 @@ Useful when the site does things after load that you want to capture.
 
 ### crop
 
-Type: `boolean`  
+Type: `boolean`<br>
 Default: `false`
 
 Crop to the set height.
@@ -110,8 +108,7 @@ Go to the website you want a cookie for and copy-paste it from Dev Tools.
 
 Type: `string`
 
-Define a customized filename using [Lo-Dash templates](http://lodash.com/docs#template).  
-For example `{{date}} - {{url}}-{{size}}{{crop}}`.
+Define a customized filename using [Lo-Dash templates](http://lodash.com/docs#template). For example `{{date}} - {{url}}-{{size}}{{crop}}`.
 
 Available variables:
 
@@ -155,8 +152,8 @@ Scale webpage `n` of times.
 
 ### format
 
-Type: `String`  
-Default: `png`  
+Type: `string`<br>
+Default: `png`<br>
 Values: `png`, `jpg`
 
 Image format.
@@ -176,4 +173,4 @@ Custom HTTP request headers.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
