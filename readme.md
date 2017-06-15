@@ -164,6 +164,13 @@ Type: `string`
 
 Custom user agent.
 
+### transparent
+
+Type: `Boolean`<br>
+Default: `false`
+
+Set background color to `transparent` instead of `white` if no background is set.
+
 ### headers
 
 Type: `object`
