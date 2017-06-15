@@ -1,15 +1,15 @@
 'use strict';
-var Pageres = require('pageres');
-var arrify = require('arrify');
+const Pageres = require('pageres');
+const arrify = require('arrify');
 
-module.exports = function (grunt) {
+module.exports = grunt => {
 	grunt.registerMultiTask('pageres', 'Capture website screenshots', function () {
-		var done = this.async();
-		var options = this.options();
+		const done = this.async();
+		const options = this.options();
 
-		// legacy
+		// Legacy
 		if (options.url) {
-			options.urls = options.url;
+			throw new Error('The `url` option is no longer available. Use the `urls` option.');
 		}
 
 		if (!options.urls || !options.sizes || !options.dest) {
@@ -18,14 +18,14 @@ module.exports = function (grunt) {
 			return;
 		}
 
-		// grunt uses the standard lodash template syntax already
+		// Grunt uses the standard lodash template syntax already
 		if (options.filename) {
 			options.filename = options.filename.replace(/\{\{([^{]+)\}\}/g, '<%= $1 %>');
 		}
 
-		var pageres = new Pageres(options);
+		const pageres = new Pageres(options);
 
-		arrify(options.urls).forEach(function (url) {
+		arrify(options.urls).forEach(url => {
 			pageres.src(url, options.sizes);
 		});
 
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
 		pageres
 			.run()
-			.then(function () {
+			.then(() => {
 				pageres.successMessage();
 				done();
 			})

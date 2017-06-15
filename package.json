@@ -1,75 +1,75 @@
 {
-  "name": "grunt-pageres",
-  "version": "2.2.0",
-  "description": "Capture website screenshots",
-  "license": "MIT",
-  "repository": "sindresorhus/grunt-pageres",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "maintainers": [
-    {
-      "name": "Kevin Mårtensson",
-      "email": "kevinmartensson@gmail.com",
-      "url": "github.com/kevva"
-    }
-  ],
-  "engines": {
-    "node": ">=0.12.0"
-  },
-  "scripts": {
-    "test": "xo && grunt && ava && trash tmp"
-  },
-  "files": [
-    "tasks"
-  ],
-  "keywords": [
-    "gruntplugin",
-    "pageres",
-    "page",
-    "website",
-    "site",
-    "web",
-    "url",
-    "resolution",
-    "size",
-    "screenshot",
-    "screenshots",
-    "screengrab",
-    "screen",
-    "snapshot",
-    "shot",
-    "responsive",
-    "gulpfriendly",
-    "phantom",
-    "phantomjs",
-    "image",
-    "svg",
-    "render",
-    "html",
-    "headless",
-    "capture",
-    "pic",
-    "picture",
-    "png",
-    "jpg",
-    "jpeg"
-  ],
-  "dependencies": {
-    "arrify": "^1.0.0",
-    "pageres": "^4.1.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "path-exists": "^2.0.0",
-    "trash-cli": "^1.1.0",
-    "xo": "*"
-  },
-  "peerDependencies": {
-    "grunt": ">=0.4.0"
-  }
+	"name": "grunt-pageres",
+	"version": "2.2.0",
+	"description": "Capture website screenshots",
+	"license": "MIT",
+	"repository": "sindresorhus/grunt-pageres",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"maintainers": [
+		{
+			"name": "Kevin Mårtensson",
+			"email": "kevinmartensson@gmail.com",
+			"url": "github.com/kevva"
+		}
+	],
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && grunt && ava && trash tmp"
+	},
+	"files": [
+		"tasks"
+	],
+	"keywords": [
+		"gruntplugin",
+		"pageres",
+		"page",
+		"website",
+		"site",
+		"web",
+		"url",
+		"resolution",
+		"size",
+		"screenshot",
+		"screenshots",
+		"screengrab",
+		"screen",
+		"snapshot",
+		"shot",
+		"responsive",
+		"gulpfriendly",
+		"phantom",
+		"phantomjs",
+		"image",
+		"svg",
+		"render",
+		"html",
+		"headless",
+		"capture",
+		"pic",
+		"picture",
+		"png",
+		"jpg",
+		"jpeg"
+	],
+	"dependencies": {
+		"arrify": "^1.0.0",
+		"pageres": "^4.1.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"grunt": "^1.0.1",
+		"grunt-cli": "^1.2.0",
+		"path-exists": "^3.0.0",
+		"trash-cli": "^1.1.0",
+		"xo": "*"
+	},
+	"peerDependencies": {
+		"grunt": ">=0.4.0"
+	}
 }
