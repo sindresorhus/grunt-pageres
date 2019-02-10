@@ -4,16 +4,24 @@ module.exports = grunt => {
 		pageres: {
 			screenshot: {
 				options: {
-					urls: 'yeoman.io',
-					sizes: ['1000x1000', '100x100'],
-					dest: 'tmp'
+					urls: 'https://sindresorhus.com',
+					sizes: [
+						'1000x1000',
+						'100x100'
+					],
+					dest: 'temp'
 				}
 			},
 			multipleUrls: {
 				options: {
-					urls: ['yeoman.io', 'google.com'],
-					sizes: ['1000x1000'],
-					dest: 'tmp'
+					urls: [
+						'https://github.com',
+						'https://google.com'
+					],
+					sizes: [
+						'1000x1000'
+					],
+					dest: 'temp'
 				}
 			}
 		}

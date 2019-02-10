@@ -7,13 +7,8 @@ module.exports = grunt => {
 		const done = this.async();
 		const options = this.options();
 
-		// Legacy
-		if (options.url) {
-			throw new Error('The `url` option is no longer available. Use the `urls` option.');
-		}
-
 		if (!options.urls || !options.sizes || !options.dest) {
-			grunt.warn('url|sizes|dest are required');
+			grunt.warn('The `url`, `sizes`, and `dest` options are required');
 			done();
 			return;
 		}
@@ -25,19 +20,20 @@ module.exports = grunt => {
 
 		const pageres = new Pageres(options);
 
-		arrify(options.urls).forEach(url => {
+		for (const url of arrify(options.urls)) {
 			pageres.src(url, options.sizes);
-		});
+		}
 
-		pageres.dest(options.dest)
-			.on('warn', grunt.verbose.writeln);
+		pageres.dest(options.dest);
 
-		pageres
-			.run()
-			.then(() => {
+		(async () => {
+			try {
+				await pageres.run();
 				pageres.successMessage();
 				done();
-			})
-			.catch(grunt.warn);
+			} catch (error) {
+				grunt.warn(error);
+			}
+		})();
 	});
 };

@@ -2,7 +2,7 @@
 
 [<img src="https://github.com/sindresorhus/pageres/raw/master/media/logo.png" width="150" align="right">](https://github.com/sindresorhus/pageres)
 
-> Capture website screenshots using [pageres](https://github.com/sindresorhus/pageres)
+> Capture website screenshots using [`pageres`](https://github.com/sindresorhus/pageres)
 
 *Issues should be opened on the pageres [issue tracker](https://github.com/sindresorhus/pageres/issues).*
 
@@ -15,27 +15,36 @@
 $ npm install --save-dev grunt-pageres
 ```
 
-*PhantomJS, which is used for generating the screenshots, is installed automagically, but in some [rare cases](https://github.com/Obvious/phantomjs/issues/102) it might fail to and you'll get an `Error: spawn EACCES` error. [Download](http://phantomjs.org/download.html) PhantomJS manually and reinstall this task if that happens.*
+Note to Linux users: If you get a "No usable sandbox!" error, you need to enable [system sandboxing](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#setting-up-chrome-linux-sandbox).
 
 
 ## Usage
 
 ```js
-require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+require('load-grunt-tasks')(grunt);
 
 grunt.initConfig({
 	pageres: {
 		screenshot: {
 			options: {
-				urls: 'yeoman.io',
-				sizes: ['1200x800', '800x600'],
+				urls: 'https://sindresorhus.com',
+				sizes: [
+					'1200x800',
+					'800x600'
+				],
 				dest: 'dist'
 			}
 		},
 		multipleUrls: {
 			options: {
-				urls: ['todomvc.com', 'google.com'],
-				sizes: ['800x1000', '400x1000'],
+				urls: [
+					'https://sindresorhus.com',
+					'https://google.com'
+				],
+				sizes: [
+					'800x1000',
+					'400x1000'
+				],
 				dest: 'dist',
 				crop: true
 			}
@@ -52,14 +61,14 @@ grunt.registerTask('default', ['pageres']);
 ### urls
 
 *Required*<br>
-Type: `string`, `array`
+Type: `string | string[]`
 
 One or more URLs or local paths to the websites you want to screenshot.
 
 ### sizes
 
 *Required*<br>
-Type: `array`
+Type: `string[]`
 
 Use a `<width>x<height>` notation or a keyword.
 
@@ -81,6 +90,13 @@ Delay capturing the screenshot.
 
 Useful when the site does things after load that you want to capture.
 
+### timeout
+
+Type: `number` *(seconds)*<br>
+Default: `60`
+
+Number of seconds after which the request is aborted.
+
 ### crop
 
 Type: `boolean`<br>
@@ -94,25 +110,30 @@ Type: `string`
 
 Apply custom CSS to the webpage. Specify some CSS or the path to a CSS file.
 
+### script
+
+Type: `string`
+
+Apply custom JavaScript to the webpage. Specify some JavaScript or the path to a file.
+
 ### cookies
 
-Type: `array` of `string`, `object`
+Type: `Array<string | Object>`
 
-A string with the same format as a [browser cookie](http://en.wikipedia.org/wiki/HTTP_cookie) or an object of what [`phantomjs.addCookie`](http://phantomjs.org/api/phantom/method/add-cookie.html) accepts.
+A string with the same format as a [browser cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) or [an object](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetcookiecookies).
 
-#### Tip
-
-Go to the website you want a cookie for and copy-paste it from Dev Tools.
+Tip: Go to the website you want a cookie for and [copy-paste it from DevTools](https://stackoverflow.com/a/24961735/64949).
 
 ### filename
 
 Type: `string`
 
-Define a customized filename using [Lo-Dash templates](http://lodash.com/docs#template). For example `{{date}} - {{url}}-{{size}}{{crop}}`.
+Define a customized filename using [Lo-Dash templates](https://lodash.com/docs#template).<br>
+For example `<%= date %> - <%= url %>-<%= size %><%= crop %>`.
 
 Available variables:
 
-- `url`: The URL in [slugified](https://github.com/ogt/slugify-url) form, eg. `http://yeoman.io/blog/` becomes `yeoman.io!blog`
+- `url`: The URL in [slugified](https://github.com/sindresorhus/filenamify-url) form, eg. `http://yeoman.io/blog/` becomes `yeoman.io!blog`
 - `size`: Specified size, eg. `1024x1000`
 - `width`: Width of the specified size, eg. `1024`
 - `height`: Height of the specified size, eg. `1000`
@@ -120,17 +141,24 @@ Available variables:
 - `date`: The current date (Y-M-d), eg. 2015-05-18
 - `time`: The current time (h-m-s), eg. 21-15-11
 
+### incrementalName
+
+Type: `boolean`<br>
+Default: `false`
+
+When a file exists, append an incremental number.
+
 ### selector
 
 Type: `string`
 
-Capture a specific DOM element.
+Capture a specific DOM element matching a CSS selector.
 
 ### hide
 
-Type: `array`
+Type: `string[]`
 
-Hide an array of DOM elements.
+Hide an array of DOM elements matching CSS selectors.
 
 ### username
 
@@ -146,9 +174,10 @@ Password for authenticating with HTTP auth.
 
 ### scale
 
-Type: `number`
+Type: `number`<br>
+Default: `1`
 
-Scale webpage `n` of times.
+Scale webpage `n` times.
 
 ### format
 
@@ -164,18 +193,18 @@ Type: `string`
 
 Custom user agent.
 
+### headers
+
+Type: `Object`
+
+Custom HTTP request headers.
+
 ### transparent
 
-Type: `Boolean`<br>
+Type: `boolean`<br>
 Default: `false`
 
 Set background color to `transparent` instead of `white` if no background is set.
-
-### headers
-
-Type: `object`
-
-Custom HTTP request headers.
 
 
 ## License
