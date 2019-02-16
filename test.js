@@ -10,3 +10,7 @@ test('multiple URLs', t => {
 	t.true(pathExists.sync('temp/github.com-1000x1000.png'));
 	t.true(pathExists.sync('temp/google.com-1000x1000.png'));
 });
+
+test('`filename` option', t => {
+	t.true(pathExists.sync('temp/filename-option-sindresorhus.com.png'));
+});

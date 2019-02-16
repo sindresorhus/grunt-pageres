@@ -128,8 +128,8 @@ Tip: Go to the website you want a cookie for and [copy-paste it from DevTools](h
 
 Type: `string`
 
-Define a customized filename using [Lo-Dash templates](https://lodash.com/docs#template).<br>
-For example `<%= date %> - <%= url %>-<%= size %><%= crop %>`.
+Define a customized filename using templating.<br>
+For example `{{date}} - {{url}}-{{size}}{{crop}}`.
 
 Available variables:
 

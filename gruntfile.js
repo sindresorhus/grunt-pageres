@@ -23,6 +23,18 @@ module.exports = grunt => {
 					],
 					dest: 'temp'
 				}
+			},
+			filenameOption: {
+				options: {
+					urls: [
+						'https://sindresorhus.com'
+					],
+					sizes: [
+						'1000x1000'
+					],
+					filename: 'filename-option-{{url}}',
+					dest: 'temp'
+				}
 			}
 		}
 	});
