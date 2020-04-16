@@ -1,4 +1,4 @@
-# grunt-pageres [![Build Status](https://travis-ci.org/sindresorhus/grunt-pageres.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-pageres)
+# grunt-pageres [![Build Status](https://travis-ci.com/sindresorhus/grunt-pageres.svg?branch=master)](https://travis-ci.com/sindresorhus/grunt-pageres)
 
 [<img src="https://github.com/sindresorhus/pageres/raw/master/media/logo.png" width="150" align="right">](https://github.com/sindresorhus/pageres)
 
@@ -8,7 +8,6 @@
 
 [Using another task runner?](https://github.com/sindresorhus/pageres#task-runners)
 
-
 ## Install
 
 ```
@@ -16,7 +15,6 @@ $ npm install --save-dev grunt-pageres
 ```
 
 Note to Linux users: If you get a "No usable sandbox!" error, you need to enable [system sandboxing](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#setting-up-chrome-linux-sandbox).
-
 
 ## Usage
 
@@ -55,35 +53,34 @@ grunt.initConfig({
 grunt.registerTask('default', ['pageres']);
 ```
 
-
 ## Options
 
 ### urls
 
-*Required*<br>
+*Required*\
 Type: `string | string[]`
 
 One or more URLs or local paths to the websites you want to screenshot.
 
 ### sizes
 
-*Required*<br>
+*Required*\
 Type: `string[]`
 
 Use a `<width>x<height>` notation or a keyword.
 
-A keyword is a version of a device from [this list](http://viewportsizes.com). You can also pass in the `w3counter` keyword to use the ten most popular resolutions from [w3counter](http://www.w3counter.com/globalstats.php).
+A keyword is a version of a device. You can also pass in the `w3counter` keyword to use the ten most popular resolutions from [w3counter](https://www.w3counter.com/globalstats.php).
 
 ### dest
 
-*Required*<br>
+*Required*\
 Type: `string`
 
 Destination directory.
 
 ### delay
 
-Type: `number` *(seconds)*<br>
+Type: `number` *(seconds)*\
 Default: `0`
 
 Delay capturing the screenshot.
@@ -92,14 +89,14 @@ Useful when the site does things after load that you want to capture.
 
 ### timeout
 
-Type: `number` *(seconds)*<br>
+Type: `number` *(seconds)*\
 Default: `60`
 
 Number of seconds after which the request is aborted.
 
 ### crop
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false`
 
 Crop to the set height.
@@ -118,7 +115,7 @@ Apply custom JavaScript to the webpage. Specify some JavaScript or the path to a
 
 ### cookies
 
-Type: `Array<string | Object>`
+Type: `Array<string | object>`
 
 A string with the same format as a [browser cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) or [an object](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetcookiecookies).
 
@@ -128,12 +125,12 @@ Tip: Go to the website you want a cookie for and [copy-paste it from DevTools](h
 
 Type: `string`
 
-Define a customized filename using templating.<br>
+Define a customized filename using templating.\
 For example `{{date}} - {{url}}-{{size}}{{crop}}`.
 
 Available variables:
 
-- `url`: The URL in [slugified](https://github.com/sindresorhus/filenamify-url) form, eg. `http://yeoman.io/blog/` becomes `yeoman.io!blog`
+- `url`: The URL in [slugified](https://github.com/sindresorhus/filenamify-url) form, eg. `https://yeoman.io/blog/` becomes `yeoman.io!blog`
 - `size`: Specified size, eg. `1024x1000`
 - `width`: Width of the specified size, eg. `1024`
 - `height`: Height of the specified size, eg. `1000`
@@ -143,7 +140,7 @@ Available variables:
 
 ### incrementalName
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false`
 
 When a file exists, append an incremental number.
@@ -174,16 +171,16 @@ Password for authenticating with HTTP auth.
 
 ### scale
 
-Type: `number`<br>
+Type: `number`\
 Default: `1`
 
 Scale webpage `n` times.
 
 ### format
 
-Type: `string`<br>
-Default: `png`<br>
-Values: `png`, `jpg`
+Type: `string`\
+Default: `png`\
+Values: `'png' | 'jpg'`
 
 Image format.
 
@@ -195,18 +192,13 @@ Custom user agent.
 
 ### headers
 
-Type: `Object`
+Type: `object`
 
 Custom HTTP request headers.
 
 ### transparent
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false`
 
 Set background color to `transparent` instead of `white` if no background is set.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
