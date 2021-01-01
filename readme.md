@@ -1,4 +1,4 @@
-# grunt-pageres [![Build Status](https://travis-ci.com/sindresorhus/grunt-pageres.svg?branch=master)](https://travis-ci.com/sindresorhus/grunt-pageres)
+# grunt-pageres
 
 [<img src="https://github.com/sindresorhus/pageres/raw/master/media/logo.png" width="150" align="right">](https://github.com/sindresorhus/pageres)
 
