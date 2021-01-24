@@ -1,6 +1,6 @@
 # grunt-pageres
 
-[<img src="https://github.com/sindresorhus/pageres/raw/master/media/logo.png" width="150" align="right">](https://github.com/sindresorhus/pageres)
+[<img src="media/logo.png" width="150" align="right">](https://github.com/sindresorhus/pageres)
 
 > Capture website screenshots using [`pageres`](https://github.com/sindresorhus/pageres)
 
